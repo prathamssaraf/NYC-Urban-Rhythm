@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>NYC Urban Rhythm - Multi-Dataset Urban Activity Analysis</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Mapbox GL JS -->
+    <link href="https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.css" rel="stylesheet"/>
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.js"></script>
+    <!-- D3.js, PapaParse, Chart.js -->
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.2/papaparse.min.js"></script>
+    <!-- Make sure these script tags are in the right order in your index.html -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
+    <!-- Wait until Chart.js is fully loaded -->
+    <script>
+    // Check that Chart is available
+    if (typeof Chart === 'undefined') {
+        console.error('Chart.js not loaded properly!');
+    } else {
+        console.log('Chart.js loaded successfully');
+    }
+    </script>
+    <!-- Then add the plugin -->
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-chart-matrix@1.1.1/dist/chartjs-chart-matrix.min.js"></script>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-gray-100 p-4 md:p-8">
+    <div class="max-w-7xl mx-auto bg-white p-4 md:p-6 rounded-lg shadow-lg mb-20">
+        <h1 class="text-2xl md:text-3xl font-bold text-center mb-2">NYC Urban Rhythm</h1>
+        <p class="text-center text-gray-600 mb-4">Analyzing Urban Activity Patterns Across NYC</p>
+
+        <!-- Controls -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3 mb-4">
+            <div class="p-3 border rounded-lg bg-gray-50">
+                <h3 class="font-medium text-sm mb-2">311 Service Requests</h3>
+                <input type="file" id="csv311" accept=".csv" multiple class="text-sm mb-1"/>
+                <p class="text-xs text-gray-500">Load 311 call data</p>
+            </div>
+            
+            <div class="p-3 border rounded-lg bg-gray-50">
+                <h3 class="font-medium text-sm mb-2">MTA Transit Data</h3>
+                <input type="file" id="csvMTA" accept=".csv" multiple class="text-sm mb-1"/>
+                <p class="text-xs text-gray-500">Load subway ridership data</p>
+            </div>
+            
+            <div class="p-3 border rounded-lg bg-gray-50">
+                <h3 class="font-medium text-sm mb-2">TLC Trip Data</h3>
+                <input type="file" id="csvTLC" accept=".csv" multiple class="text-sm mb-1"/>
+                <p class="text-xs text-gray-500">Load taxi/rideshare data</p>
+            </div>
+            
+            <div class="p-3 border rounded-lg bg-gray-50">
+                <h3 class="font-medium text-sm mb-2">NYC Events</h3>
+                <input type="file" id="csvEvents" accept=".csv" multiple class="text-sm mb-1"/>
+                <p class="text-xs text-gray-500">Load event permit data</p>
+            </div>
+        </div>
+
+        <div class="flex flex-col lg:flex-row gap-3 mb-4 items-end justify-center">
+            <div class="flex gap-3">
+                <div>
+                    <label class="block text-sm font-medium mb-1">Start Date:</label>
+                    <input type="date" id="startDate" disabled class="text-sm"/>
+                </div>
+                <div>
+                    <label class="block text-sm font-medium mb-1">End Date:</label>
+                    <input type="date" id="endDate" disabled class="text-sm"/>
+                </div>
+            </div>
+            <button id="updateDashboardBtn" disabled class="px-3 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 text-sm whitespace-nowrap">
+                Update Dashboard
+            </button>
+        </div>
+
+        <!-- Timeline Control -->
+        <div id="timeline-control" class="mb-4 p-3 border rounded-lg bg-gray-50 hidden">
+            <div class="flex justify-between items-center mb-2">
+                <h3 class="font-medium">Timeline</h3>
+                <div class="flex gap-2">
+                    <button id="hourly-view" class="px-2 py-1 text-xs bg-blue-100 rounded">Hourly</button>
+                    <button id="daily-view" class="px-2 py-1 text-xs bg-gray-200 rounded">Daily</button>
+                    <button id="weekly-view" class="px-2 py-1 text-xs bg-gray-200 rounded">Weekly</button>
+                    <button id="monthly-view" class="px-2 py-1 text-xs bg-gray-200 rounded">Monthly</button>
+                </div>
+            </div>
+            <div id="timeline-slider-container" class="h-12"></div>
+        </div>
+
+        <!-- Tabs -->
+        <div class="border-b border-gray-200 mb-4">
+            <ul class="flex flex-wrap text-center">
+                <li class="mr-2">
+                    <button id="tab-map" class="tab-active inline-block p-3 rounded-t-lg hover:bg-gray-50">
+                        Map View
+                    </button>
+                </li>
+                <li class="mr-2">
+                    <button id="tab-trends" class="inline-block p-3 rounded-t-lg hover:bg-gray-50">
+                        Trend Analysis
+                    </button>
+                </li>
+                <li class="mr-2">
+                    <button id="tab-categories" class="inline-block p-3 rounded-t-lg hover:bg-gray-50">
+                        Service Requests
+                    </button>
+                </li>
+                <li class="mr-2">
+                    <button id="tab-transit" class="inline-block p-3 rounded-t-lg hover:bg-gray-50">
+                        Transit
+                    </button>
+                </li>
+                <li class="mr-2">
+                    <button id="tab-taxi" class="inline-block p-3 rounded-t-lg hover:bg-gray-50">
+                        Taxi Trips
+                    </button>
+                </li>
+                <li class="mr-2">
+                    <button id="tab-events" class="inline-block p-3 rounded-t-lg hover:bg-gray-50">
+                        Events
+                    </button>
+                </li>
+                <li class="mr-2">
+                    <button id="tab-correlation" class="inline-block p-3 rounded-t-lg hover:bg-gray-50">
+                        Correlations
+                    </button>
+                </li>
+                <li class="mr-2">
+                    <button id="tab-weather" class="inline-block p-3 rounded-t-lg hover:bg-gray-50">
+                        Weather
+                    </button>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Tab Content -->
+        <div class="tab-content">
+            <!-- Map Tab -->
+            <div id="content-map" class="tab-pane">
+                <div class="relative">
+                    <div id="map" class="rounded-lg mb-4"></div>
+                    <div id="tooltip"></div>
+                    <div id="loading-overlay">
+                        <div class="spinner"></div>
+                        <span id="loading-text" class="ml-2 text-gray-700">Loading...</span>
+                    </div>
+                    <div id="legend" class="legend absolute bottom-4 right-4 hidden"></div>
+                    
+                    <!-- Layer Controls -->
+                    <div class="absolute top-4 right-4 bg-white p-2 rounded-lg shadow border">
+                        <h4 class="text-sm font-medium mb-2">Layers</h4>
+                        <div class="flex flex-col gap-1">
+                            <label class="flex items-center text-xs">
+                                <input type="checkbox" id="layer-311" checked class="mr-1">
+                                311 Calls
+                            </label>
+                            <label class="flex items-center text-xs">
+                                <input type="checkbox" id="layer-transit" class="mr-1">
+                                Transit Stations
+                            </label>
+                            <label class="flex items-center text-xs">
+                                <input type="checkbox" id="layer-taxi" class="mr-1">
+                                Taxi Activity
+                            </label>
+                            <label class="flex items-center text-xs">
+                                <input type="checkbox" id="layer-events" class="mr-1">
+                                Events
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Trend Analysis Tab -->
+            <div id="content-trends" class="tab-pane hidden">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
+                    <div class="bg-white p-3 rounded-lg shadow border">
+                        <h3 class="text-lg font-semibold mb-2">Activity Over Time</h3>
+                        <div class="chart-container">
+                            <canvas id="trends-chart"></canvas>
+                        </div>
+                    </div>
+                    <div class="bg-white p-3 rounded-lg shadow border">
+                        <h3 class="text-lg font-semibold mb-2">Activity by Day of Week</h3>
+                        <div class="chart-container">
+                            <canvas id="dow-chart"></canvas>
+                        </div>
+                    </div>
+                    <div class="bg-white p-3 rounded-lg shadow border">
+                        <h3 class="text-lg font-semibold mb-2">Activity by Hour of Day</h3>
+                        <div class="chart-container">
+                            <canvas id="hour-chart"></canvas>
+                        </div>
+                    </div>
+                    <div class="bg-white p-3 rounded-lg shadow border">
+                        <h3 class="text-lg font-semibold mb-2">Borough Proportion Over Time</h3>
+                        <div class="chart-container">
+                            <canvas id="proportion-chart"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Service Requests Tab -->
+            <div id="content-categories" class="tab-pane hidden">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
+                    <div class="bg-white p-3 rounded-lg shadow border">
+                        <h3 class="text-lg font-semibold mb-2">Top Complaint Types</h3>
+                        <div id="categories-list" class="h-80 overflow-y-auto"></div>
+                    </div>
+                    <div class="bg-white p-3 rounded-lg shadow border">
+                        <h3 class="text-lg font-semibold mb-2">Complaint Breakdown by Borough</h3>
+                        <div class="chart-container h-80">
+                            <canvas id="categories-chart"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Transit Tab -->
+            <div id="content-transit" class="tab-pane hidden">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
+                    <div class="bg-white p-3 rounded-lg shadow border">
+                        <h3 class="text-lg font-semibold mb-2">Ridership by Borough</h3>
+                        <div class="chart-container">
+                            <canvas id="transit-borough-chart"></canvas>
+                        </div>
+                    </div>
+                    <div class="bg-white p-3 rounded-lg shadow border">
+                        <h3 class="text-lg font-semibold mb-2">Ridership by Time of Day</h3>
+                        <div class="chart-container">
+                            <canvas id="transit-time-chart"></canvas>
+                        </div>
+                    </div>
+                    <div class="bg-white p-3 rounded-lg shadow border col-span-2">
+                        <h3 class="text-lg font-semibold mb-2">Top Transit Stations</h3>
+                        <div id="top-stations" class="grid grid-cols-2 lg:grid-cols-3 gap-3 h-40 overflow-y-auto"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Taxi Trips Tab -->
+            <div id="content-taxi" class="tab-pane hidden">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
+                    <div class="bg-white p-3 rounded-lg shadow border">
+                        <h3 class="text-lg font-semibold mb-2">Trip Volume by Time</h3>
+                        <div class="chart-container">
+                            <canvas id="taxi-time-chart"></canvas>
+                        </div>
+                    </div>
+                    <div class="bg-white p-3 rounded-lg shadow border">
+                        <h3 class="text-lg font-semibold mb-2">Average Trip Distance</h3>
+                        <div class="chart-container">
+                            <canvas id="taxi-distance-chart"></canvas>
+                        </div>
+                    </div>
+                    <div class="bg-white p-3 rounded-lg shadow border col-span-2">
+                        <h3 class="text-lg font-semibold mb-2">Popular Pickup/Dropoff Zones</h3>
+                        <div class="chart-container h-40">
+                            <canvas id="taxi-locations-chart"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Events Tab -->
+            <div id="content-events" class="tab-pane hidden">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
+                    <div class="bg-white p-3 rounded-lg shadow border">
+                        <h3 class="text-lg font-semibold mb-2">Events by Borough</h3>
+                        <div class="chart-container">
+                            <canvas id="events-borough-chart"></canvas>
+                        </div>
+                    </div>
+                    <div class="bg-white p-3 rounded-lg shadow border">
+                        <h3 class="text-lg font-semibold mb-2">Events by Type</h3>
+                        <div class="chart-container">
+                            <canvas id="events-type-chart"></canvas>
+                        </div>
+                    </div>
+                    <div class="bg-white p-3 rounded-lg shadow border col-span-2">
+                        <h3 class="text-lg font-semibold mb-2">Upcoming/Recent Events</h3>
+                        <div id="events-list" class="h-40 overflow-y-auto"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Correlations Tab -->
+            <div id="content-correlation" class="tab-pane hidden">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
+                    <div class="bg-white p-3 rounded-lg shadow border">
+                        <h3 class="text-lg font-semibold mb-2">Transit vs 311 Calls</h3>
+                        <div class="chart-container">
+                            <canvas id="transit-311-chart"></canvas>
+                        </div>
+                    </div>
+                    <!-- <div class="bg-white p-3 rounded-lg shadow border">
+                        <h3 class="text-lg font-semibold mb-2">Events vs Nearby Activity</h3>
+                        <div class="chart-container">
+                            <canvas id="events-impact-chart"></canvas>
+                        </div>
+                    </div> -->
+                    <div class="bg-white p-3 rounded-lg shadow border">
+                        <h3 class="text-lg font-semibold mb-2">Taxi Trips vs 311 Calls</h3>
+                        <div class="chart-container">
+                            <canvas id="taxi-311-chart"></canvas>
+                        </div>
+                    </div>
+                    <!-- <div class="bg-white p-3 rounded-lg shadow border">
+                        <h3 class="text-lg font-semibold mb-2">Activity Correlation Matrix</h3>
+                        <div class="chart-container">
+                            <canvas id="correlation-matrix"></canvas>
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+
+            <!-- Weather Correlation Tab -->
+            <div id="content-weather" class="tab-pane hidden">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
+                    <div class="bg-white p-3 rounded-lg shadow border">
+                        <h3 class="text-lg font-semibold mb-2">Temperature vs. Activity</h3>
+                        <div class="chart-container">
+                            <canvas id="temp-correlation"></canvas>
+                        </div>
+                    </div>
+                    <div class="bg-white p-3 rounded-lg shadow border">
+                        <h3 class="text-lg font-semibold mb-2">Precipitation vs. Activity</h3>
+                        <div class="chart-container">
+                            <canvas id="precip-correlation"></canvas>
+                        </div>
+                    </div>
+                    <div class="bg-white p-3 rounded-lg shadow border col-span-2">
+                        <h3 class="text-lg font-semibold mb-2">Weather-Sensitive Activities</h3>
+                        <div id="weather-findings" class="text-sm text-gray-700 max-h-48 overflow-y-auto"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Info Panel -->
+        <div id="info-panel" class="mt-4 p-4 bg-gray-50 text-sm text-gray-600 rounded-lg">
+            <div id="info-text">Load data files, pick date range, then click Update Dashboard.</div>
+            <div id="stats-summary" class="mt-2 hidden">
+                <div class="font-medium">Quick Stats:</div>
+                <div class="flex flex-wrap gap-4 mt-1">
+                    <div id="stat-311" class="px-3 py-1 bg-blue-100 rounded-full text-blue-800"></div>
+                    <div id="stat-transit" class="px-3 py-1 bg-green-100 rounded-full text-green-800"></div>
+                    <div id="stat-taxi" class="px-3 py-1 bg-amber-100 rounded-full text-amber-800"></div>
+                    <div id="stat-events" class="px-3 py-1 bg-purple-100 rounded-full text-purple-800"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="config.js"></script>
+    <script src="utils.js"></script>
+    <script src="dataLoader.js"></script>
+    <script src="dataProcessor.js"></script>
+    <script src="mapVisualization.js"></script>
+    <script src="timelineControls.js"></script>
+    <script src="charts.js"></script>
+    <script src="weatherCorrelation.js"></script>
+    <script src="eventAnalysis.js"></script>
+    <script src="transitAnalysis.js"></script>
+    <script src="taxiAnalysis.js"></script>
+    <script src="correlationDashboard.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>

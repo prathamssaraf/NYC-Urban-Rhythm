@@ -1,0 +1,440 @@
+2025-04-15 14:28:32,345 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.16.86.159:5000
+2025-04-15 14:28:32,346 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-04-15 14:28:32,351 - werkzeug - INFO -  * Restarting with stat
+2025-04-15 14:28:33,338 - werkzeug - WARNING -  * Debugger is active!
+2025-04-15 14:28:33,351 - werkzeug - INFO -  * Debugger PIN: 648-719-900
+2025-04-15 14:28:42,216 - werkzeug - INFO - 127.0.0.1 - - [15/Apr/2025 14:28:42] "GET / HTTP/1.1" 200 -
+2025-04-15 14:28:43,879 - werkzeug - INFO - 127.0.0.1 - - [15/Apr/2025 14:28:43] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-04-15 14:29:04,385 - werkzeug - INFO - 127.0.0.1 - - [15/Apr/2025 14:29:04] "GET /api/health HTTP/1.1" 200 -
+2025-04-15 14:29:36,244 - data_api - ERROR - Error in get_source_status: relation "task_status" does not exist
+LINE 3:             FROM task_status
+                         ^
+
+2025-04-15 14:29:36,245 - werkzeug - INFO - 127.0.0.1 - - [15/Apr/2025 14:29:36] "[35m[1mGET /api/status/311 HTTP/1.1[0m" 500 -
+2025-04-15 14:29:45,723 - data_api - ERROR - Error in get_source_status: relation "task_status" does not exist
+LINE 3:             FROM task_status
+                         ^
+
+2025-04-15 14:29:45,724 - werkzeug - INFO - 127.0.0.1 - - [15/Apr/2025 14:29:45] "[35m[1mGET /api/status/311 HTTP/1.1[0m" 500 -
+2025-04-15 14:29:47,080 - werkzeug - INFO - 127.0.0.1 - - [15/Apr/2025 14:29:47] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-04-15 14:30:07,068 - werkzeug - INFO - 127.0.0.1 - - [15/Apr/2025 14:30:07] "GET /api/health HTTP/1.1" 200 -
+2025-04-15 14:30:11,522 - data_api - ERROR - Error in get_source_status: relation "task_status" does not exist
+LINE 3:             FROM task_status
+                         ^
+
+2025-04-15 14:30:11,523 - werkzeug - INFO - 127.0.0.1 - - [15/Apr/2025 14:30:11] "[35m[1mGET /api/status/311 HTTP/1.1[0m" 500 -
+2025-04-15 14:30:29,836 - werkzeug - INFO - 127.0.0.1 - - [15/Apr/2025 14:30:29] "GET /api/health HTTP/1.1" 200 -
+2025-04-15 14:30:30,198 - data_api - INFO - Fetching 311 data from 2024-01-01 00:00:00 to 2024-01-31 00:00:00
+2025-04-15 14:30:30,511 - data_api - INFO - Completed 311 task
+2025-04-15 14:30:30,512 - werkzeug - INFO - 127.0.0.1 - - [15/Apr/2025 14:30:30] "POST /api/fetch/311 HTTP/1.1" 200 -
+2025-04-15 14:30:32,330 - werkzeug - INFO - 127.0.0.1 - - [15/Apr/2025 14:30:32] "GET /api/status/311 HTTP/1.1" 200 -
+2025-04-15 15:14:48,384 - werkzeug - INFO - 127.0.0.1 - - [15/Apr/2025 15:14:48] "OPTIONS /api/health HTTP/1.1" 200 -
+2025-04-15 15:14:48,633 - werkzeug - INFO - 127.0.0.1 - - [15/Apr/2025 15:14:48] "GET /api/health HTTP/1.1" 200 -
+2025-04-15 15:14:52,401 - werkzeug - INFO - 127.0.0.1 - - [15/Apr/2025 15:14:52] "OPTIONS /api/status/311 HTTP/1.1" 200 -
+2025-04-15 15:14:52,907 - werkzeug - INFO - 127.0.0.1 - - [15/Apr/2025 15:14:52] "GET /api/status/311 HTTP/1.1" 200 -
+2025-04-15 15:14:57,563 - werkzeug - INFO - 127.0.0.1 - - [15/Apr/2025 15:14:57] "OPTIONS /api/urban-rhythm?start_date=2025-03-15&end_date=2025-04-15&resolution=day&data_types=311 HTTP/1.1" 200 -
+2025-04-15 15:14:58,016 - werkzeug - INFO - 127.0.0.1 - - [15/Apr/2025 15:14:58] "GET /api/urban-rhythm?start_date=2025-03-15&end_date=2025-04-15&resolution=day&data_types=311 HTTP/1.1" 200 -
+2025-04-15 15:15:01,432 - werkzeug - INFO - 127.0.0.1 - - [15/Apr/2025 15:15:01] "OPTIONS /api/fetch/311 HTTP/1.1" 200 -
+2025-04-15 15:15:01,749 - data_api - INFO - Fetching 311 data from 2025-03-15 00:00:00 to 2025-04-15 00:00:00
+2025-04-15 15:15:01,980 - data_api - INFO - Completed 311 task
+2025-04-15 15:15:01,981 - werkzeug - INFO - 127.0.0.1 - - [15/Apr/2025 15:15:01] "POST /api/fetch/311 HTTP/1.1" 200 -
+2025-04-15 15:15:18,977 - werkzeug - INFO - 127.0.0.1 - - [15/Apr/2025 15:15:18] "OPTIONS /api/sample/neighborhoods?limit=5 HTTP/1.1" 200 -
+2025-04-15 15:15:19,477 - werkzeug - INFO - 127.0.0.1 - - [15/Apr/2025 15:15:19] "GET /api/sample/neighborhoods?limit=5 HTTP/1.1" 200 -
+2025-04-15 15:15:22,261 - werkzeug - INFO - 127.0.0.1 - - [15/Apr/2025 15:15:22] "OPTIONS /api/fetch/311 HTTP/1.1" 200 -
+2025-04-15 15:15:22,572 - data_api - INFO - Fetching 311 data from 2025-03-15 00:00:00 to 2025-04-15 00:00:00
+2025-04-15 15:15:22,803 - data_api - INFO - Completed 311 task
+2025-04-15 15:15:22,804 - werkzeug - INFO - 127.0.0.1 - - [15/Apr/2025 15:15:22] "POST /api/fetch/311 HTTP/1.1" 200 -
+2025-04-15 15:15:33,817 - werkzeug - INFO - 127.0.0.1 - - [15/Apr/2025 15:15:33] "OPTIONS /api/fetch/mta HTTP/1.1" 200 -
+2025-04-15 15:15:34,076 - data_api - INFO - Fetching mta data from 2025-03-15 00:00:00 to 2025-04-15 00:00:00
+2025-04-15 15:15:34,309 - data_api - INFO - Completed mta task
+2025-04-15 15:15:34,310 - werkzeug - INFO - 127.0.0.1 - - [15/Apr/2025 15:15:34] "POST /api/fetch/mta HTTP/1.1" 200 -
+2025-04-15 15:15:48,840 - werkzeug - INFO - 127.0.0.1 - - [15/Apr/2025 15:15:48] "OPTIONS /api/fetch/mta HTTP/1.1" 200 -
+2025-04-15 15:15:49,105 - data_api - INFO - Fetching mta data from 2023-05-08 00:00:00 to 2025-04-15 00:00:00
+2025-04-15 15:15:49,214 - data_api - INFO - Completed mta task
+2025-04-15 15:15:49,215 - werkzeug - INFO - 127.0.0.1 - - [15/Apr/2025 15:15:49] "POST /api/fetch/mta HTTP/1.1" 200 -
+2025-04-15 15:15:56,589 - werkzeug - INFO - 127.0.0.1 - - [15/Apr/2025 15:15:56] "OPTIONS /api/fetch/weather HTTP/1.1" 200 -
+2025-04-15 15:15:56,841 - data_api - INFO - Fetching weather data from 2023-05-08 00:00:00 to 2025-04-15 00:00:00
+2025-04-15 15:15:57,067 - data_api - INFO - Completed weather task
+2025-04-15 15:15:57,068 - werkzeug - INFO - 127.0.0.1 - - [15/Apr/2025 15:15:57] "POST /api/fetch/weather HTTP/1.1" 200 -
+2025-04-15 15:16:20,220 - werkzeug - INFO - 127.0.0.1 - - [15/Apr/2025 15:16:20] "OPTIONS /api/status/311 HTTP/1.1" 200 -
+2025-04-15 15:16:20,531 - werkzeug - INFO - 127.0.0.1 - - [15/Apr/2025 15:16:20] "GET /api/status/311 HTTP/1.1" 200 -
+2025-04-15 15:16:23,324 - werkzeug - INFO - 127.0.0.1 - - [15/Apr/2025 15:16:23] "OPTIONS /api/status/mta HTTP/1.1" 200 -
+2025-04-15 15:16:23,693 - werkzeug - INFO - 127.0.0.1 - - [15/Apr/2025 15:16:23] "GET /api/status/mta HTTP/1.1" 200 -
+2025-04-15 15:16:27,097 - werkzeug - INFO - 127.0.0.1 - - [15/Apr/2025 15:16:27] "OPTIONS /api/health HTTP/1.1" 200 -
+2025-04-15 15:16:27,350 - werkzeug - INFO - 127.0.0.1 - - [15/Apr/2025 15:16:27] "GET /api/health HTTP/1.1" 200 -
+2025-04-15 15:17:01,928 - werkzeug - INFO - 127.0.0.1 - - [15/Apr/2025 15:17:01] "OPTIONS /api/sample/neighborhoods?limit=5 HTTP/1.1" 200 -
+2025-04-15 15:17:02,379 - werkzeug - INFO - 127.0.0.1 - - [15/Apr/2025 15:17:02] "GET /api/sample/neighborhoods?limit=5 HTTP/1.1" 200 -
+2025-04-15 15:17:10,924 - werkzeug - INFO - 127.0.0.1 - - [15/Apr/2025 15:17:10] "OPTIONS /api/sample/nyc_311_calls?limit=5 HTTP/1.1" 200 -
+2025-04-15 15:17:11,259 - werkzeug - INFO - 127.0.0.1 - - [15/Apr/2025 15:17:11] "GET /api/sample/nyc_311_calls?limit=5 HTTP/1.1" 200 -
+2025-04-23 10:21:03,295 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.121:5000
+2025-04-23 10:21:03,297 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-04-23 10:21:03,300 - werkzeug - INFO -  * Restarting with stat
+2025-04-23 10:21:05,117 - werkzeug - WARNING -  * Debugger is active!
+2025-04-23 10:21:05,138 - werkzeug - INFO -  * Debugger PIN: 648-719-900
+2025-04-23 10:34:12,076 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.121:5000
+2025-04-23 10:34:12,078 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-04-23 10:34:12,084 - werkzeug - INFO -  * Restarting with stat
+2025-04-23 10:34:15,800 - werkzeug - WARNING -  * Debugger is active!
+2025-04-23 10:34:15,819 - werkzeug - INFO -  * Debugger PIN: 648-719-900
+2025-04-23 10:34:27,531 - werkzeug - INFO - 127.0.0.1 - - [23/Apr/2025 10:34:27] "GET /api/health HTTP/1.1" 200 -
+2025-04-23 10:35:04,639 - werkzeug - INFO - 127.0.0.1 - - [23/Apr/2025 10:35:04] "GET /api/health HTTP/1.1" 200 -
+2025-04-23 10:35:09,119 - werkzeug - INFO - 127.0.0.1 - - [23/Apr/2025 10:35:09] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-04-23 10:35:30,346 - werkzeug - INFO - 127.0.0.1 - - [23/Apr/2025 10:35:30] "[33mGET /api-tester.html HTTP/1.1[0m" 404 -
+2025-04-23 10:35:52,010 - werkzeug - INFO - 127.0.0.1 - - [23/Apr/2025 10:35:52] "GET / HTTP/1.1" 200 -
+2025-04-23 10:36:09,550 - werkzeug - INFO - 127.0.0.1 - - [23/Apr/2025 10:36:09] "OPTIONS /api/health HTTP/1.1" 200 -
+2025-04-23 10:36:09,795 - werkzeug - INFO - 127.0.0.1 - - [23/Apr/2025 10:36:09] "GET /api/health HTTP/1.1" 200 -
+2025-04-23 10:36:11,644 - werkzeug - INFO - 127.0.0.1 - - [23/Apr/2025 10:36:11] "OPTIONS /api/status/311 HTTP/1.1" 200 -
+2025-04-23 10:36:12,217 - werkzeug - INFO - 127.0.0.1 - - [23/Apr/2025 10:36:12] "GET /api/status/311 HTTP/1.1" 200 -
+2025-04-23 10:36:19,426 - werkzeug - INFO - 127.0.0.1 - - [23/Apr/2025 10:36:19] "OPTIONS /api/fetch/311 HTTP/1.1" 200 -
+2025-04-23 10:36:19,644 - data_api - INFO - Fetching 311 data from 2025-03-23 00:00:00 to 2025-04-23 00:00:00
+2025-04-23 10:36:19,927 - data_api - INFO - Completed 311 task
+2025-04-23 10:36:19,929 - werkzeug - INFO - 127.0.0.1 - - [23/Apr/2025 10:36:19] "POST /api/fetch/311 HTTP/1.1" 200 -
+2025-04-23 10:36:23,260 - werkzeug - INFO - 127.0.0.1 - - [23/Apr/2025 10:36:23] "OPTIONS /api/sample/neighborhoods?limit=5 HTTP/1.1" 200 -
+2025-04-23 10:36:23,743 - werkzeug - INFO - 127.0.0.1 - - [23/Apr/2025 10:36:23] "GET /api/sample/neighborhoods?limit=5 HTTP/1.1" 200 -
+2025-04-23 10:36:35,675 - werkzeug - INFO - 127.0.0.1 - - [23/Apr/2025 10:36:35] "OPTIONS /api/fetch/311 HTTP/1.1" 200 -
+2025-04-23 10:36:35,922 - data_api - INFO - Fetching 311 data from 2020-01-23 00:00:00 to 2025-04-23 00:00:00
+2025-04-23 10:36:36,145 - data_api - INFO - Completed 311 task
+2025-04-23 10:36:36,147 - werkzeug - INFO - 127.0.0.1 - - [23/Apr/2025 10:36:36] "POST /api/fetch/311 HTTP/1.1" 200 -
+2025-04-23 10:36:37,572 - werkzeug - INFO - 127.0.0.1 - - [23/Apr/2025 10:36:37] "OPTIONS /api/sample/neighborhoods?limit=5 HTTP/1.1" 200 -
+2025-04-23 10:36:38,030 - werkzeug - INFO - 127.0.0.1 - - [23/Apr/2025 10:36:38] "GET /api/sample/neighborhoods?limit=5 HTTP/1.1" 200 -
+2025-04-23 10:36:40,880 - werkzeug - INFO - 127.0.0.1 - - [23/Apr/2025 10:36:40] "OPTIONS /api/sample/mta_turnstile?limit=5 HTTP/1.1" 200 -
+2025-04-23 10:36:41,341 - werkzeug - INFO - 127.0.0.1 - - [23/Apr/2025 10:36:41] "GET /api/sample/mta_turnstile?limit=5 HTTP/1.1" 200 -
+2025-04-23 10:36:45,197 - werkzeug - INFO - 127.0.0.1 - - [23/Apr/2025 10:36:45] "OPTIONS /api/sample/weather?limit=5 HTTP/1.1" 200 -
+2025-04-23 10:36:45,621 - werkzeug - INFO - 127.0.0.1 - - [23/Apr/2025 10:36:45] "GET /api/sample/weather?limit=5 HTTP/1.1" 200 -
+2025-04-23 11:46:58,845 - werkzeug - INFO - 127.0.0.1 - - [23/Apr/2025 11:46:58] "OPTIONS /api/health HTTP/1.1" 200 -
+2025-04-23 11:46:58,950 - werkzeug - INFO - 127.0.0.1 - - [23/Apr/2025 11:46:58] "GET /api/health HTTP/1.1" 200 -
+2025-04-23 11:46:59,936 - werkzeug - INFO - 127.0.0.1 - - [23/Apr/2025 11:46:59] "[33mOPTIONS /api/neighborhoods HTTP/1.1[0m" 404 -
+2025-04-23 11:49:06,355 - werkzeug - INFO - 127.0.0.1 - - [23/Apr/2025 11:49:06] "OPTIONS /api/health HTTP/1.1" 200 -
+2025-04-23 11:49:06,619 - werkzeug - INFO - 127.0.0.1 - - [23/Apr/2025 11:49:06] "GET /api/health HTTP/1.1" 200 -
+2025-04-23 11:49:07,880 - werkzeug - INFO - 127.0.0.1 - - [23/Apr/2025 11:49:07] "[33mOPTIONS /api/neighborhoods HTTP/1.1[0m" 404 -
+2025-04-23 11:49:13,874 - werkzeug - INFO - 127.0.0.1 - - [23/Apr/2025 11:49:13] "OPTIONS /api/health HTTP/1.1" 200 -
+2025-04-23 11:49:14,116 - werkzeug - INFO - 127.0.0.1 - - [23/Apr/2025 11:49:14] "GET /api/health HTTP/1.1" 200 -
+2025-04-23 11:49:14,404 - werkzeug - INFO - 127.0.0.1 - - [23/Apr/2025 11:49:14] "[33mOPTIONS /api/neighborhoods HTTP/1.1[0m" 404 -
+2025-04-23 11:50:05,742 - werkzeug - INFO - 127.0.0.1 - - [23/Apr/2025 11:50:05] "GET /api/health HTTP/1.1" 200 -
+2025-04-23 11:50:20,659 - werkzeug - INFO - 127.0.0.1 - - [23/Apr/2025 11:50:20] "OPTIONS /api/health HTTP/1.1" 200 -
+2025-04-23 11:50:20,921 - werkzeug - INFO - 127.0.0.1 - - [23/Apr/2025 11:50:20] "GET /api/health HTTP/1.1" 200 -
+2025-04-23 11:50:22,092 - werkzeug - INFO - 127.0.0.1 - - [23/Apr/2025 11:50:22] "[33mOPTIONS /api/neighborhoods HTTP/1.1[0m" 404 -
+2025-04-23 11:53:39,294 - werkzeug - INFO - 127.0.0.1 - - [23/Apr/2025 11:53:39] "OPTIONS /api/health HTTP/1.1" 200 -
+2025-04-23 11:53:39,563 - werkzeug - INFO - 127.0.0.1 - - [23/Apr/2025 11:53:39] "GET /api/health HTTP/1.1" 200 -
+2025-04-23 11:53:40,182 - werkzeug - INFO - 127.0.0.1 - - [23/Apr/2025 11:53:40] "[33mOPTIONS /api/neighborhoods HTTP/1.1[0m" 404 -
+2025-04-23 11:54:02,430 - werkzeug - INFO - 127.0.0.1 - - [23/Apr/2025 11:54:02] "GET /api/health HTTP/1.1" 200 -
+2025-04-23 11:54:02,699 - werkzeug - INFO - 127.0.0.1 - - [23/Apr/2025 11:54:02] "OPTIONS /api/fetch/311 HTTP/1.1" 200 -
+2025-04-23 11:54:02,761 - data_api - INFO - Fetching 311 data from 2020-01-01 00:00:00 to 2025-04-23 00:00:00
+2025-04-23 11:54:03,125 - data_api - INFO - Completed 311 task
+2025-04-23 11:54:03,126 - werkzeug - INFO - 127.0.0.1 - - [23/Apr/2025 11:54:03] "POST /api/fetch/311 HTTP/1.1" 200 -
+2025-04-23 11:54:03,135 - werkzeug - INFO - 127.0.0.1 - - [23/Apr/2025 11:54:03] "OPTIONS /api/fetch/mta HTTP/1.1" 200 -
+2025-04-23 11:54:03,450 - data_api - INFO - Fetching mta data from 2020-01-01 00:00:00 to 2025-04-23 00:00:00
+2025-04-23 11:54:03,822 - data_api - INFO - Completed mta task
+2025-04-23 11:54:03,824 - werkzeug - INFO - 127.0.0.1 - - [23/Apr/2025 11:54:03] "POST /api/fetch/mta HTTP/1.1" 200 -
+2025-04-23 11:54:03,838 - werkzeug - INFO - 127.0.0.1 - - [23/Apr/2025 11:54:03] "OPTIONS /api/fetch/tlc HTTP/1.1" 200 -
+2025-04-23 11:54:04,158 - data_api - INFO - Fetching tlc data from 2020-01-01 00:00:00 to 2025-04-23 00:00:00
+2025-04-23 11:54:04,406 - data_api - INFO - Completed tlc task
+2025-04-23 11:54:04,407 - werkzeug - INFO - 127.0.0.1 - - [23/Apr/2025 11:54:04] "POST /api/fetch/tlc HTTP/1.1" 200 -
+2025-04-23 11:54:04,706 - werkzeug - INFO - 127.0.0.1 - - [23/Apr/2025 11:54:04] "GET /api/sample/nyc_311_calls?limit=100 HTTP/1.1" 200 -
+2025-04-23 11:54:08,760 - werkzeug - INFO - 127.0.0.1 - - [23/Apr/2025 11:54:08] "GET /api/health HTTP/1.1" 200 -
+2025-04-23 11:54:09,007 - werkzeug - INFO - 127.0.0.1 - - [23/Apr/2025 11:54:09] "OPTIONS /api/fetch/311 HTTP/1.1" 200 -
+2025-04-23 11:54:09,077 - data_api - INFO - Fetching 311 data from 2020-01-01 00:00:00 to 2025-04-23 00:00:00
+2025-04-23 11:54:09,601 - data_api - INFO - Completed 311 task
+2025-04-23 11:54:09,602 - werkzeug - INFO - 127.0.0.1 - - [23/Apr/2025 11:54:09] "POST /api/fetch/311 HTTP/1.1" 200 -
+2025-04-23 11:54:09,617 - werkzeug - INFO - 127.0.0.1 - - [23/Apr/2025 11:54:09] "OPTIONS /api/fetch/mta HTTP/1.1" 200 -
+2025-04-23 11:54:09,938 - data_api - INFO - Fetching mta data from 2020-01-01 00:00:00 to 2025-04-23 00:00:00
+2025-04-23 11:54:10,267 - data_api - INFO - Completed mta task
+2025-04-23 11:54:10,269 - werkzeug - INFO - 127.0.0.1 - - [23/Apr/2025 11:54:10] "POST /api/fetch/mta HTTP/1.1" 200 -
+2025-04-23 11:54:10,284 - werkzeug - INFO - 127.0.0.1 - - [23/Apr/2025 11:54:10] "OPTIONS /api/fetch/tlc HTTP/1.1" 200 -
+2025-04-23 11:54:10,595 - data_api - INFO - Fetching tlc data from 2020-01-01 00:00:00 to 2025-04-23 00:00:00
+2025-04-23 11:54:10,995 - data_api - INFO - Completed tlc task
+2025-04-23 11:54:10,997 - werkzeug - INFO - 127.0.0.1 - - [23/Apr/2025 11:54:10] "POST /api/fetch/tlc HTTP/1.1" 200 -
+2025-04-23 11:54:11,236 - werkzeug - INFO - 127.0.0.1 - - [23/Apr/2025 11:54:11] "GET /api/sample/nyc_311_calls?limit=100 HTTP/1.1" 200 -
+2025-04-23 11:55:47,678 - werkzeug - INFO - 127.0.0.1 - - [23/Apr/2025 11:55:47] "GET /api/sample/nyc_311_calls?limit=10 HTTP/1.1" 200 -
+2025-04-23 11:57:13,926 - werkzeug - INFO - 127.0.0.1 - - [23/Apr/2025 11:57:13] "GET /api/sample/nyc_311_calls?limit=50 HTTP/1.1" 200 -
+2025-04-23 11:57:14,512 - werkzeug - INFO - 127.0.0.1 - - [23/Apr/2025 11:57:14] "GET /api/sample/mta_turnstile?limit=50 HTTP/1.1" 200 -
+2025-04-23 11:57:15,389 - werkzeug - INFO - 127.0.0.1 - - [23/Apr/2025 11:57:15] "GET /api/sample/tlc_trips?limit=50 HTTP/1.1" 200 -
+2025-04-23 11:57:41,289 - werkzeug - INFO - 127.0.0.1 - - [23/Apr/2025 11:57:41] "GET /api/health HTTP/1.1" 200 -
+2025-04-23 12:02:02,915 - werkzeug - INFO - 127.0.0.1 - - [23/Apr/2025 12:02:02] "GET /api/sample/tlc_trips?limit=50 HTTP/1.1" 200 -
+2025-04-23 12:02:07,434 - werkzeug - INFO - 127.0.0.1 - - [23/Apr/2025 12:02:07] "GET /api/sample/tlc_trips?limit=50 HTTP/1.1" 200 -
+2025-04-23 12:02:12,515 - werkzeug - INFO - 127.0.0.1 - - [23/Apr/2025 12:02:12] "GET /api/sample/mta_turnstile?limit=50 HTTP/1.1" 200 -
+2025-04-23 12:02:12,714 - werkzeug - INFO - 127.0.0.1 - - [23/Apr/2025 12:02:12] "GET /api/sample/tlc_trips?limit=50 HTTP/1.1" 200 -
+2025-04-23 12:02:16,266 - werkzeug - INFO - 127.0.0.1 - - [23/Apr/2025 12:02:16] "GET /api/sample/nyc_311_calls?limit=50 HTTP/1.1" 200 -
+2025-04-23 12:02:16,454 - werkzeug - INFO - 127.0.0.1 - - [23/Apr/2025 12:02:16] "GET /api/sample/mta_turnstile?limit=50 HTTP/1.1" 200 -
+2025-04-23 12:02:16,682 - werkzeug - INFO - 127.0.0.1 - - [23/Apr/2025 12:02:16] "GET /api/sample/tlc_trips?limit=50 HTTP/1.1" 200 -
+2025-04-23 15:01:28,799 - werkzeug - INFO - 127.0.0.1 - - [23/Apr/2025 15:01:28] "OPTIONS /api/fetch/311 HTTP/1.1" 200 -
+2025-04-23 15:01:29,056 - data_api - INFO - Fetching 311 data from 2020-01-01 00:00:00 to 2023-01-01 00:00:00
+2025-04-23 15:01:29,412 - data_api - INFO - Completed 311 task
+2025-04-23 15:01:29,413 - werkzeug - INFO - 127.0.0.1 - - [23/Apr/2025 15:01:29] "POST /api/fetch/311 HTTP/1.1" 200 -
+2025-04-23 15:01:29,694 - werkzeug - INFO - 127.0.0.1 - - [23/Apr/2025 15:01:29] "GET /api/sample/nyc_311_calls?limit=100 HTTP/1.1" 200 -
+2025-04-23 15:01:30,024 - werkzeug - INFO - 127.0.0.1 - - [23/Apr/2025 15:01:30] "OPTIONS /api/fetch/mta HTTP/1.1" 200 -
+2025-04-23 15:01:30,275 - data_api - INFO - Fetching mta data from 2020-01-01 00:00:00 to 2023-01-01 00:00:00
+2025-04-23 15:01:30,775 - data_api - INFO - Completed mta task
+2025-04-23 15:01:30,777 - werkzeug - INFO - 127.0.0.1 - - [23/Apr/2025 15:01:30] "POST /api/fetch/mta HTTP/1.1" 200 -
+2025-04-23 15:01:31,071 - werkzeug - INFO - 127.0.0.1 - - [23/Apr/2025 15:01:31] "GET /api/sample/mta_turnstile?limit=100 HTTP/1.1" 200 -
+2025-04-23 15:01:31,558 - werkzeug - INFO - 127.0.0.1 - - [23/Apr/2025 15:01:31] "OPTIONS /api/fetch/tlc HTTP/1.1" 200 -
+2025-04-23 15:01:31,822 - data_api - INFO - Fetching tlc data from 2020-01-01 00:00:00 to 2023-01-01 00:00:00
+2025-04-23 15:01:32,064 - data_api - INFO - Completed tlc task
+2025-04-23 15:01:32,065 - werkzeug - INFO - 127.0.0.1 - - [23/Apr/2025 15:01:32] "POST /api/fetch/tlc HTTP/1.1" 200 -
+2025-04-23 15:01:32,338 - werkzeug - INFO - 127.0.0.1 - - [23/Apr/2025 15:01:32] "GET /api/sample/tlc_trips?limit=100 HTTP/1.1" 200 -
+2025-04-23 15:01:32,800 - data_api - ERROR - Error in get_urban_rhythm: unit "hourly" not recognized for type timestamp without time zone
+
+2025-04-23 15:01:32,803 - werkzeug - INFO - 127.0.0.1 - - [23/Apr/2025 15:01:32] "[35m[1mGET /api/urban-rhythm?start_date=2020-01-01&end_date=2023-01-01&data_types=311,mta,tlc HTTP/1.1[0m" 500 -
+2025-04-23 15:01:46,115 - werkzeug - INFO - 127.0.0.1 - - [23/Apr/2025 15:01:46] "GET /api/health HTTP/1.1" 200 -
+2025-04-23 15:01:46,489 - werkzeug - INFO - 127.0.0.1 - - [23/Apr/2025 15:01:46] "GET /api/sample/neighborhoods?limit=100 HTTP/1.1" 200 -
+2025-04-23 15:02:12,707 - werkzeug - INFO - 127.0.0.1 - - [23/Apr/2025 15:02:12] "OPTIONS /api/fetch/311 HTTP/1.1" 200 -
+2025-04-23 15:02:12,961 - data_api - INFO - Fetching 311 data from 2020-01-01 00:00:00 to 2025-04-23 00:00:00
+2025-04-23 15:02:13,358 - data_api - INFO - Completed 311 task
+2025-04-23 15:02:13,393 - werkzeug - INFO - 127.0.0.1 - - [23/Apr/2025 15:02:13] "POST /api/fetch/311 HTTP/1.1" 200 -
+2025-04-23 15:02:13,892 - werkzeug - INFO - 127.0.0.1 - - [23/Apr/2025 15:02:13] "GET /api/sample/nyc_311_calls?limit=100 HTTP/1.1" 200 -
+2025-04-23 15:02:14,220 - werkzeug - INFO - 127.0.0.1 - - [23/Apr/2025 15:02:14] "OPTIONS /api/fetch/mta HTTP/1.1" 200 -
+2025-04-23 15:02:14,474 - data_api - INFO - Fetching mta data from 2020-01-01 00:00:00 to 2025-04-23 00:00:00
+2025-04-23 15:02:14,753 - data_api - INFO - Completed mta task
+2025-04-23 15:02:14,754 - werkzeug - INFO - 127.0.0.1 - - [23/Apr/2025 15:02:14] "POST /api/fetch/mta HTTP/1.1" 200 -
+2025-04-23 15:02:14,892 - werkzeug - INFO - 127.0.0.1 - - [23/Apr/2025 15:02:14] "GET /api/sample/mta_turnstile?limit=100 HTTP/1.1" 200 -
+2025-04-23 15:02:15,206 - werkzeug - INFO - 127.0.0.1 - - [23/Apr/2025 15:02:15] "OPTIONS /api/fetch/tlc HTTP/1.1" 200 -
+2025-04-23 15:02:15,462 - data_api - INFO - Fetching tlc data from 2020-01-01 00:00:00 to 2025-04-23 00:00:00
+2025-04-23 15:02:15,784 - data_api - INFO - Completed tlc task
+2025-04-23 15:02:15,785 - werkzeug - INFO - 127.0.0.1 - - [23/Apr/2025 15:02:15] "POST /api/fetch/tlc HTTP/1.1" 200 -
+2025-04-23 15:02:15,930 - werkzeug - INFO - 127.0.0.1 - - [23/Apr/2025 15:02:15] "GET /api/sample/tlc_trips?limit=100 HTTP/1.1" 200 -
+2025-04-23 15:02:16,438 - data_api - ERROR - Error in get_urban_rhythm: unit "hourly" not recognized for type timestamp without time zone
+
+2025-04-23 15:02:16,439 - werkzeug - INFO - 127.0.0.1 - - [23/Apr/2025 15:02:16] "[35m[1mGET /api/urban-rhythm?start_date=2020-01-01&end_date=2025-04-23&data_types=311,mta,tlc HTTP/1.1[0m" 500 -
+2025-04-23 15:06:42,602 - werkzeug - INFO - 127.0.0.1 - - [23/Apr/2025 15:06:42] "OPTIONS /api/fetch/311 HTTP/1.1" 200 -
+2025-04-23 15:06:42,858 - data_api - INFO - Fetching 311 data from 2020-01-01 00:00:00 to 2025-04-23 00:00:00
+2025-04-23 15:06:43,183 - data_api - INFO - Completed 311 task
+2025-04-23 15:06:43,185 - werkzeug - INFO - 127.0.0.1 - - [23/Apr/2025 15:06:43] "POST /api/fetch/311 HTTP/1.1" 200 -
+2025-04-23 15:06:43,469 - werkzeug - INFO - 127.0.0.1 - - [23/Apr/2025 15:06:43] "GET /api/sample/nyc_311_calls?limit=100 HTTP/1.1" 200 -
+2025-04-23 15:06:43,792 - werkzeug - INFO - 127.0.0.1 - - [23/Apr/2025 15:06:43] "OPTIONS /api/fetch/mta HTTP/1.1" 200 -
+2025-04-23 15:06:44,046 - data_api - INFO - Fetching mta data from 2020-01-01 00:00:00 to 2025-04-23 00:00:00
+2025-04-23 15:06:44,229 - data_api - INFO - Completed mta task
+2025-04-23 15:06:44,231 - werkzeug - INFO - 127.0.0.1 - - [23/Apr/2025 15:06:44] "POST /api/fetch/mta HTTP/1.1" 200 -
+2025-04-23 15:06:44,383 - werkzeug - INFO - 127.0.0.1 - - [23/Apr/2025 15:06:44] "GET /api/sample/mta_turnstile?limit=100 HTTP/1.1" 200 -
+2025-04-23 15:06:44,696 - werkzeug - INFO - 127.0.0.1 - - [23/Apr/2025 15:06:44] "OPTIONS /api/fetch/tlc HTTP/1.1" 200 -
+2025-04-23 15:06:44,951 - data_api - INFO - Fetching tlc data from 2020-01-01 00:00:00 to 2025-04-23 00:00:00
+2025-04-23 15:06:45,209 - data_api - INFO - Completed tlc task
+2025-04-23 15:06:45,210 - werkzeug - INFO - 127.0.0.1 - - [23/Apr/2025 15:06:45] "POST /api/fetch/tlc HTTP/1.1" 200 -
+2025-04-23 15:06:45,419 - werkzeug - INFO - 127.0.0.1 - - [23/Apr/2025 15:06:45] "GET /api/sample/tlc_trips?limit=100 HTTP/1.1" 200 -
+2025-04-23 15:06:45,970 - data_api - ERROR - Error in get_urban_rhythm: unit "hourly" not recognized for type timestamp without time zone
+
+2025-04-23 15:06:45,971 - werkzeug - INFO - 127.0.0.1 - - [23/Apr/2025 15:06:45] "[35m[1mGET /api/urban-rhythm?start_date=2020-01-01&end_date=2025-04-23&data_types=311,mta,tlc HTTP/1.1[0m" 500 -
+2025-04-23 15:07:00,832 - werkzeug - INFO - 127.0.0.1 - - [23/Apr/2025 15:07:00] "OPTIONS /api/fetch/311 HTTP/1.1" 200 -
+2025-04-23 15:07:01,150 - data_api - INFO - Fetching 311 data from 2020-01-01 00:00:00 to 2025-04-23 00:00:00
+2025-04-23 15:07:01,435 - data_api - INFO - Completed 311 task
+2025-04-23 15:07:01,439 - werkzeug - INFO - 127.0.0.1 - - [23/Apr/2025 15:07:01] "POST /api/fetch/311 HTTP/1.1" 200 -
+2025-04-23 15:07:01,557 - werkzeug - INFO - 127.0.0.1 - - [23/Apr/2025 15:07:01] "GET /api/sample/nyc_311_calls?limit=100 HTTP/1.1" 200 -
+2025-04-23 15:07:01,880 - werkzeug - INFO - 127.0.0.1 - - [23/Apr/2025 15:07:01] "OPTIONS /api/fetch/mta HTTP/1.1" 200 -
+2025-04-23 15:07:02,175 - data_api - INFO - Fetching mta data from 2020-01-01 00:00:00 to 2025-04-23 00:00:00
+2025-04-23 15:07:02,506 - data_api - INFO - Completed mta task
+2025-04-23 15:07:02,507 - werkzeug - INFO - 127.0.0.1 - - [23/Apr/2025 15:07:02] "POST /api/fetch/mta HTTP/1.1" 200 -
+2025-04-23 15:07:02,649 - werkzeug - INFO - 127.0.0.1 - - [23/Apr/2025 15:07:02] "GET /api/sample/mta_turnstile?limit=100 HTTP/1.1" 200 -
+2025-04-23 15:07:02,964 - werkzeug - INFO - 127.0.0.1 - - [23/Apr/2025 15:07:02] "OPTIONS /api/fetch/tlc HTTP/1.1" 200 -
+2025-04-23 15:07:03,220 - data_api - INFO - Fetching tlc data from 2020-01-01 00:00:00 to 2025-04-23 00:00:00
+2025-04-23 15:07:03,418 - data_api - INFO - Completed tlc task
+2025-04-23 15:07:03,419 - werkzeug - INFO - 127.0.0.1 - - [23/Apr/2025 15:07:03] "POST /api/fetch/tlc HTTP/1.1" 200 -
+2025-04-23 15:07:03,575 - werkzeug - INFO - 127.0.0.1 - - [23/Apr/2025 15:07:03] "GET /api/sample/tlc_trips?limit=100 HTTP/1.1" 200 -
+2025-04-23 15:07:04,080 - data_api - ERROR - Error in get_urban_rhythm: unit "hourly" not recognized for type timestamp without time zone
+
+2025-04-23 15:07:04,081 - werkzeug - INFO - 127.0.0.1 - - [23/Apr/2025 15:07:04] "[35m[1mGET /api/urban-rhythm?start_date=2020-01-01&end_date=2025-04-23&data_types=311,mta,tlc HTTP/1.1[0m" 500 -
+2025-04-23 15:07:11,210 - werkzeug - INFO - 127.0.0.1 - - [23/Apr/2025 15:07:11] "OPTIONS /api/fetch/311 HTTP/1.1" 200 -
+2025-04-23 15:07:11,519 - data_api - INFO - Fetching 311 data from 2020-01-01 00:00:00 to 2025-04-23 00:00:00
+2025-04-23 15:07:11,742 - data_api - INFO - Completed 311 task
+2025-04-23 15:07:11,743 - werkzeug - INFO - 127.0.0.1 - - [23/Apr/2025 15:07:11] "POST /api/fetch/311 HTTP/1.1" 200 -
+2025-04-23 15:07:11,986 - werkzeug - INFO - 127.0.0.1 - - [23/Apr/2025 15:07:11] "GET /api/sample/nyc_311_calls?limit=100 HTTP/1.1" 200 -
+2025-04-23 15:07:12,059 - werkzeug - INFO - 127.0.0.1 - - [23/Apr/2025 15:07:12] "OPTIONS /api/fetch/mta HTTP/1.1" 200 -
+2025-04-23 15:07:12,313 - data_api - INFO - Fetching mta data from 2020-01-01 00:00:00 to 2025-04-23 00:00:00
+2025-04-23 15:07:12,608 - data_api - INFO - Completed mta task
+2025-04-23 15:07:12,609 - werkzeug - INFO - 127.0.0.1 - - [23/Apr/2025 15:07:12] "POST /api/fetch/mta HTTP/1.1" 200 -
+2025-04-23 15:07:12,770 - werkzeug - INFO - 127.0.0.1 - - [23/Apr/2025 15:07:12] "GET /api/sample/mta_turnstile?limit=100 HTTP/1.1" 200 -
+2025-04-23 15:07:13,092 - werkzeug - INFO - 127.0.0.1 - - [23/Apr/2025 15:07:13] "OPTIONS /api/fetch/tlc HTTP/1.1" 200 -
+2025-04-23 15:07:13,347 - data_api - INFO - Fetching tlc data from 2020-01-01 00:00:00 to 2025-04-23 00:00:00
+2025-04-23 15:07:13,665 - data_api - INFO - Completed tlc task
+2025-04-23 15:07:13,666 - werkzeug - INFO - 127.0.0.1 - - [23/Apr/2025 15:07:13] "POST /api/fetch/tlc HTTP/1.1" 200 -
+2025-04-23 15:07:13,921 - werkzeug - INFO - 127.0.0.1 - - [23/Apr/2025 15:07:13] "GET /api/sample/tlc_trips?limit=100 HTTP/1.1" 200 -
+2025-04-23 15:07:14,341 - data_api - ERROR - Error in get_urban_rhythm: unit "hourly" not recognized for type timestamp without time zone
+
+2025-04-23 15:07:14,343 - werkzeug - INFO - 127.0.0.1 - - [23/Apr/2025 15:07:14] "[35m[1mGET /api/urban-rhythm?start_date=2020-01-01&end_date=2025-04-23&data_types=311,mta,tlc HTTP/1.1[0m" 500 -
+2025-04-23 15:07:24,241 - werkzeug - INFO - 127.0.0.1 - - [23/Apr/2025 15:07:24] "OPTIONS /api/fetch/311 HTTP/1.1" 200 -
+2025-04-23 15:07:24,557 - data_api - INFO - Fetching 311 data from 2020-01-01 00:00:00 to 2025-04-23 00:00:00
+2025-04-23 15:07:24,933 - data_api - INFO - Completed 311 task
+2025-04-23 15:07:24,934 - werkzeug - INFO - 127.0.0.1 - - [23/Apr/2025 15:07:24] "POST /api/fetch/311 HTTP/1.1" 200 -
+2025-04-23 15:07:25,062 - werkzeug - INFO - 127.0.0.1 - - [23/Apr/2025 15:07:25] "GET /api/sample/nyc_311_calls?limit=100 HTTP/1.1" 200 -
+2025-04-23 15:07:25,385 - werkzeug - INFO - 127.0.0.1 - - [23/Apr/2025 15:07:25] "OPTIONS /api/fetch/mta HTTP/1.1" 200 -
+2025-04-23 15:07:25,637 - data_api - INFO - Fetching mta data from 2020-01-01 00:00:00 to 2025-04-23 00:00:00
+2025-04-23 15:07:25,965 - data_api - INFO - Completed mta task
+2025-04-23 15:07:25,966 - werkzeug - INFO - 127.0.0.1 - - [23/Apr/2025 15:07:25] "POST /api/fetch/mta HTTP/1.1" 200 -
+2025-04-23 15:07:26,206 - werkzeug - INFO - 127.0.0.1 - - [23/Apr/2025 15:07:26] "GET /api/sample/mta_turnstile?limit=100 HTTP/1.1" 200 -
+2025-04-23 15:07:26,521 - werkzeug - INFO - 127.0.0.1 - - [23/Apr/2025 15:07:26] "OPTIONS /api/fetch/tlc HTTP/1.1" 200 -
+2025-04-23 15:07:26,777 - data_api - INFO - Fetching tlc data from 2020-01-01 00:00:00 to 2025-04-23 00:00:00
+2025-04-23 15:07:27,070 - data_api - INFO - Completed tlc task
+2025-04-23 15:07:27,073 - werkzeug - INFO - 127.0.0.1 - - [23/Apr/2025 15:07:27] "POST /api/fetch/tlc HTTP/1.1" 200 -
+2025-04-23 15:07:27,240 - werkzeug - INFO - 127.0.0.1 - - [23/Apr/2025 15:07:27] "GET /api/sample/tlc_trips?limit=100 HTTP/1.1" 200 -
+2025-04-23 15:07:27,641 - data_api - ERROR - Error in get_urban_rhythm: unit "hourly" not recognized for type timestamp without time zone
+
+2025-04-23 15:07:27,642 - werkzeug - INFO - 127.0.0.1 - - [23/Apr/2025 15:07:27] "[35m[1mGET /api/urban-rhythm?start_date=2020-01-01&end_date=2025-04-23&data_types=311,mta,tlc HTTP/1.1[0m" 500 -
+2025-04-23 15:07:31,759 - werkzeug - INFO - 127.0.0.1 - - [23/Apr/2025 15:07:31] "OPTIONS /api/fetch/311 HTTP/1.1" 200 -
+2025-04-23 15:07:32,068 - data_api - INFO - Fetching 311 data from 2020-01-01 00:00:00 to 2025-04-23 00:00:00
+2025-04-23 15:07:32,335 - data_api - INFO - Completed 311 task
+2025-04-23 15:07:32,336 - werkzeug - INFO - 127.0.0.1 - - [23/Apr/2025 15:07:32] "POST /api/fetch/311 HTTP/1.1" 200 -
+2025-04-23 15:07:32,496 - werkzeug - INFO - 127.0.0.1 - - [23/Apr/2025 15:07:32] "GET /api/sample/nyc_311_calls?limit=100 HTTP/1.1" 200 -
+2025-04-23 15:07:32,818 - werkzeug - INFO - 127.0.0.1 - - [23/Apr/2025 15:07:32] "OPTIONS /api/fetch/mta HTTP/1.1" 200 -
+2025-04-23 15:07:33,085 - data_api - INFO - Fetching mta data from 2020-01-01 00:00:00 to 2025-04-23 00:00:00
+2025-04-23 15:07:33,249 - data_api - INFO - Completed mta task
+2025-04-23 15:07:33,250 - werkzeug - INFO - 127.0.0.1 - - [23/Apr/2025 15:07:33] "POST /api/fetch/mta HTTP/1.1" 200 -
+2025-04-23 15:07:33,379 - werkzeug - INFO - 127.0.0.1 - - [23/Apr/2025 15:07:33] "GET /api/sample/mta_turnstile?limit=100 HTTP/1.1" 200 -
+2025-04-23 15:07:33,705 - werkzeug - INFO - 127.0.0.1 - - [23/Apr/2025 15:07:33] "OPTIONS /api/fetch/tlc HTTP/1.1" 200 -
+2025-04-23 15:07:33,943 - data_api - INFO - Fetching tlc data from 2020-01-01 00:00:00 to 2025-04-23 00:00:00
+2025-04-23 15:07:34,199 - data_api - INFO - Completed tlc task
+2025-04-23 15:07:34,200 - werkzeug - INFO - 127.0.0.1 - - [23/Apr/2025 15:07:34] "POST /api/fetch/tlc HTTP/1.1" 200 -
+2025-04-23 15:07:34,471 - werkzeug - INFO - 127.0.0.1 - - [23/Apr/2025 15:07:34] "GET /api/sample/tlc_trips?limit=100 HTTP/1.1" 200 -
+2025-04-23 15:07:35,075 - data_api - ERROR - Error in get_urban_rhythm: unit "hourly" not recognized for type timestamp without time zone
+
+2025-04-23 15:07:35,076 - werkzeug - INFO - 127.0.0.1 - - [23/Apr/2025 15:07:35] "[35m[1mGET /api/urban-rhythm?start_date=2020-01-01&end_date=2025-04-23&data_types=311,mta,tlc HTTP/1.1[0m" 500 -
+2025-04-23 17:30:04,661 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.121:5000
+2025-04-23 17:30:04,663 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-04-23 17:30:04,671 - werkzeug - INFO -  * Restarting with stat
+2025-04-23 17:30:07,617 - werkzeug - WARNING -  * Debugger is active!
+2025-04-23 17:30:07,634 - werkzeug - INFO -  * Debugger PIN: 648-719-900
+2025-04-23 17:34:15,655 - werkzeug - INFO - 127.0.0.1 - - [23/Apr/2025 17:34:15] "GET /api/health HTTP/1.1" 200 -
+2025-04-23 17:34:16,807 - werkzeug - INFO - 127.0.0.1 - - [23/Apr/2025 17:34:16] "GET /api/sample/neighborhoods?limit=100 HTTP/1.1" 200 -
+2025-04-23 17:34:17,245 - werkzeug - INFO - 127.0.0.1 - - [23/Apr/2025 17:34:17] "GET /api/health HTTP/1.1" 200 -
+2025-04-23 17:34:17,770 - werkzeug - INFO - 127.0.0.1 - - [23/Apr/2025 17:34:17] "GET /api/sample/neighborhoods?limit=100 HTTP/1.1" 200 -
+2025-04-23 17:34:18,158 - werkzeug - INFO - 127.0.0.1 - - [23/Apr/2025 17:34:18] "OPTIONS /api/fetch/311 HTTP/1.1" 200 -
+2025-04-23 17:34:18,471 - data_api - INFO - Fetching 311 data from 2020-01-01 00:00:00 to 2023-01-01 00:00:00
+2025-04-23 17:34:18,936 - data_api - INFO - Completed 311 task
+2025-04-23 17:34:18,938 - werkzeug - INFO - 127.0.0.1 - - [23/Apr/2025 17:34:18] "POST /api/fetch/311 HTTP/1.1" 200 -
+2025-04-23 17:34:19,869 - werkzeug - INFO - 127.0.0.1 - - [23/Apr/2025 17:34:19] "GET /api/sample/nyc_311_calls?limit=100 HTTP/1.1" 200 -
+2025-04-23 17:34:20,190 - werkzeug - INFO - 127.0.0.1 - - [23/Apr/2025 17:34:20] "OPTIONS /api/fetch/mta HTTP/1.1" 200 -
+2025-04-23 17:34:20,458 - data_api - INFO - Fetching mta data from 2020-01-01 00:00:00 to 2023-01-01 00:00:00
+2025-04-23 17:34:20,724 - data_api - INFO - Completed mta task
+2025-04-23 17:34:20,725 - werkzeug - INFO - 127.0.0.1 - - [23/Apr/2025 17:34:20] "POST /api/fetch/mta HTTP/1.1" 200 -
+2025-04-23 17:34:20,933 - werkzeug - INFO - 127.0.0.1 - - [23/Apr/2025 17:34:20] "GET /api/sample/mta_turnstile?limit=100 HTTP/1.1" 200 -
+2025-04-23 17:34:21,264 - werkzeug - INFO - 127.0.0.1 - - [23/Apr/2025 17:34:21] "OPTIONS /api/fetch/tlc HTTP/1.1" 200 -
+2025-04-23 17:34:21,518 - data_api - INFO - Fetching tlc data from 2020-01-01 00:00:00 to 2023-01-01 00:00:00
+2025-04-23 17:34:21,778 - data_api - INFO - Completed tlc task
+2025-04-23 17:34:21,780 - werkzeug - INFO - 127.0.0.1 - - [23/Apr/2025 17:34:21] "POST /api/fetch/tlc HTTP/1.1" 200 -
+2025-04-23 17:34:21,928 - werkzeug - INFO - 127.0.0.1 - - [23/Apr/2025 17:34:21] "GET /api/sample/tlc_trips?limit=100 HTTP/1.1" 200 -
+2025-04-23 17:34:22,469 - data_api - ERROR - Error in get_urban_rhythm: unit "hourly" not recognized for type timestamp without time zone
+
+2025-04-23 17:34:22,470 - werkzeug - INFO - 127.0.0.1 - - [23/Apr/2025 17:34:22] "[35m[1mGET /api/urban-rhythm?start_date=2020-01-01&end_date=2023-01-01&data_types=311,mta,tlc HTTP/1.1[0m" 500 -
+2025-04-23 17:34:51,450 - werkzeug - INFO - 127.0.0.1 - - [23/Apr/2025 17:34:51] "OPTIONS /api/fetch/311 HTTP/1.1" 200 -
+2025-04-23 17:34:51,717 - data_api - INFO - Fetching 311 data from 2020-01-01 00:00:00 to 2023-01-01 00:00:00
+2025-04-23 17:34:52,325 - data_api - INFO - Completed 311 task
+2025-04-23 17:34:52,327 - werkzeug - INFO - 127.0.0.1 - - [23/Apr/2025 17:34:52] "POST /api/fetch/311 HTTP/1.1" 200 -
+2025-04-23 17:34:53,066 - werkzeug - INFO - 127.0.0.1 - - [23/Apr/2025 17:34:53] "GET /api/sample/nyc_311_calls?limit=100 HTTP/1.1" 200 -
+2025-04-23 17:34:53,081 - werkzeug - INFO - 127.0.0.1 - - [23/Apr/2025 17:34:53] "OPTIONS /api/fetch/mta HTTP/1.1" 200 -
+2025-04-23 17:34:53,393 - data_api - INFO - Fetching mta data from 2020-01-01 00:00:00 to 2023-01-01 00:00:00
+2025-04-23 17:34:53,692 - data_api - INFO - Completed mta task
+2025-04-23 17:34:53,693 - werkzeug - INFO - 127.0.0.1 - - [23/Apr/2025 17:34:53] "POST /api/fetch/mta HTTP/1.1" 200 -
+2025-04-23 17:34:53,842 - werkzeug - INFO - 127.0.0.1 - - [23/Apr/2025 17:34:53] "GET /api/sample/mta_turnstile?limit=100 HTTP/1.1" 200 -
+2025-04-23 17:34:54,169 - werkzeug - INFO - 127.0.0.1 - - [23/Apr/2025 17:34:54] "OPTIONS /api/fetch/tlc HTTP/1.1" 200 -
+2025-04-23 17:34:54,408 - data_api - INFO - Fetching tlc data from 2020-01-01 00:00:00 to 2023-01-01 00:00:00
+2025-04-23 17:34:54,635 - data_api - INFO - Completed tlc task
+2025-04-23 17:34:54,636 - werkzeug - INFO - 127.0.0.1 - - [23/Apr/2025 17:34:54] "POST /api/fetch/tlc HTTP/1.1" 200 -
+2025-04-23 17:34:54,790 - werkzeug - INFO - 127.0.0.1 - - [23/Apr/2025 17:34:54] "GET /api/sample/tlc_trips?limit=100 HTTP/1.1" 200 -
+2025-04-23 17:34:55,317 - data_api - ERROR - Error in get_urban_rhythm: unit "hourly" not recognized for type timestamp without time zone
+
+2025-04-23 17:34:55,318 - werkzeug - INFO - 127.0.0.1 - - [23/Apr/2025 17:34:55] "[35m[1mGET /api/urban-rhythm?start_date=2020-01-01&end_date=2023-01-01&data_types=311,mta,tlc HTTP/1.1[0m" 500 -
+2025-04-23 17:37:33,623 - werkzeug - INFO - 127.0.0.1 - - [23/Apr/2025 17:37:33] "OPTIONS /api/fetch/311 HTTP/1.1" 200 -
+2025-04-23 17:37:33,884 - data_api - INFO - Fetching 311 data from 2020-01-01 00:00:00 to 2023-01-01 00:00:00
+2025-04-23 17:37:34,047 - data_api - INFO - Completed 311 task
+2025-04-23 17:37:34,048 - werkzeug - INFO - 127.0.0.1 - - [23/Apr/2025 17:37:34] "POST /api/fetch/311 HTTP/1.1" 200 -
+2025-04-23 17:37:34,200 - werkzeug - INFO - 127.0.0.1 - - [23/Apr/2025 17:37:34] "GET /api/sample/nyc_311_calls?limit=100 HTTP/1.1" 200 -
+2025-04-23 17:37:34,521 - werkzeug - INFO - 127.0.0.1 - - [23/Apr/2025 17:37:34] "OPTIONS /api/fetch/mta HTTP/1.1" 200 -
+2025-04-23 17:37:34,776 - data_api - INFO - Fetching mta data from 2020-01-01 00:00:00 to 2023-01-01 00:00:00
+2025-04-23 17:37:34,988 - data_api - INFO - Completed mta task
+2025-04-23 17:37:34,990 - werkzeug - INFO - 127.0.0.1 - - [23/Apr/2025 17:37:34] "POST /api/fetch/mta HTTP/1.1" 200 -
+2025-04-23 17:37:35,131 - werkzeug - INFO - 127.0.0.1 - - [23/Apr/2025 17:37:35] "GET /api/sample/mta_turnstile?limit=100 HTTP/1.1" 200 -
+2025-04-23 17:37:35,446 - werkzeug - INFO - 127.0.0.1 - - [23/Apr/2025 17:37:35] "OPTIONS /api/fetch/tlc HTTP/1.1" 200 -
+2025-04-23 17:37:35,701 - data_api - INFO - Fetching tlc data from 2020-01-01 00:00:00 to 2023-01-01 00:00:00
+2025-04-23 17:37:35,962 - data_api - INFO - Completed tlc task
+2025-04-23 17:37:35,963 - werkzeug - INFO - 127.0.0.1 - - [23/Apr/2025 17:37:35] "POST /api/fetch/tlc HTTP/1.1" 200 -
+2025-04-23 17:37:36,186 - werkzeug - INFO - 127.0.0.1 - - [23/Apr/2025 17:37:36] "GET /api/sample/tlc_trips?limit=100 HTTP/1.1" 200 -
+2025-04-23 17:37:36,701 - data_api - ERROR - Error in get_urban_rhythm: unit "hourly" not recognized for type timestamp without time zone
+
+2025-04-23 17:37:36,702 - werkzeug - INFO - 127.0.0.1 - - [23/Apr/2025 17:37:36] "[35m[1mGET /api/urban-rhythm?start_date=2020-01-01&end_date=2023-01-01&data_types=311,mta,tlc HTTP/1.1[0m" 500 -
+2025-04-23 17:39:05,478 - werkzeug - INFO - 127.0.0.1 - - [23/Apr/2025 17:39:05] "OPTIONS /api/fetch/311 HTTP/1.1" 200 -
+2025-04-23 17:39:05,714 - data_api - INFO - Fetching 311 data from 2020-01-01 00:00:00 to 2023-01-01 00:00:00
+2025-04-23 17:39:05,972 - data_api - INFO - Completed 311 task
+2025-04-23 17:39:05,973 - werkzeug - INFO - 127.0.0.1 - - [23/Apr/2025 17:39:05] "POST /api/fetch/311 HTTP/1.1" 200 -
+2025-04-23 17:39:06,186 - werkzeug - INFO - 127.0.0.1 - - [23/Apr/2025 17:39:06] "GET /api/sample/nyc_311_calls?limit=100 HTTP/1.1" 200 -
+2025-04-23 17:39:06,508 - werkzeug - INFO - 127.0.0.1 - - [23/Apr/2025 17:39:06] "OPTIONS /api/fetch/mta HTTP/1.1" 200 -
+2025-04-23 17:39:06,775 - data_api - INFO - Fetching mta data from 2020-01-01 00:00:00 to 2023-01-01 00:00:00
+2025-04-23 17:39:07,003 - data_api - INFO - Completed mta task
+2025-04-23 17:39:07,004 - werkzeug - INFO - 127.0.0.1 - - [23/Apr/2025 17:39:07] "POST /api/fetch/mta HTTP/1.1" 200 -
+2025-04-23 17:39:07,170 - werkzeug - INFO - 127.0.0.1 - - [23/Apr/2025 17:39:07] "GET /api/sample/mta_turnstile?limit=100 HTTP/1.1" 200 -
+2025-04-23 17:39:07,586 - werkzeug - INFO - 127.0.0.1 - - [23/Apr/2025 17:39:07] "OPTIONS /api/fetch/tlc HTTP/1.1" 200 -
+2025-04-23 17:39:07,825 - data_api - INFO - Fetching tlc data from 2020-01-01 00:00:00 to 2023-01-01 00:00:00
+2025-04-23 17:39:08,121 - data_api - INFO - Completed tlc task
+2025-04-23 17:39:08,122 - werkzeug - INFO - 127.0.0.1 - - [23/Apr/2025 17:39:08] "POST /api/fetch/tlc HTTP/1.1" 200 -
+2025-04-23 17:39:08,325 - werkzeug - INFO - 127.0.0.1 - - [23/Apr/2025 17:39:08] "GET /api/sample/tlc_trips?limit=100 HTTP/1.1" 200 -
+2025-04-23 17:39:08,810 - data_api - ERROR - Error in get_urban_rhythm: unit "hourly" not recognized for type timestamp without time zone
+
+2025-04-23 17:39:08,811 - werkzeug - INFO - 127.0.0.1 - - [23/Apr/2025 17:39:08] "[35m[1mGET /api/urban-rhythm?start_date=2020-01-01&end_date=2023-01-01&data_types=311,mta,tlc HTTP/1.1[0m" 500 -
+2025-04-23 17:39:11,264 - werkzeug - INFO - 127.0.0.1 - - [23/Apr/2025 17:39:11] "OPTIONS /api/fetch/311 HTTP/1.1" 200 -
+2025-04-23 17:39:11,576 - data_api - INFO - Fetching 311 data from 2020-01-01 00:00:00 to 2023-01-01 00:00:00
+2025-04-23 17:39:11,855 - data_api - INFO - Completed 311 task
+2025-04-23 17:39:11,856 - werkzeug - INFO - 127.0.0.1 - - [23/Apr/2025 17:39:11] "POST /api/fetch/311 HTTP/1.1" 200 -
+2025-04-23 17:39:12,082 - werkzeug - INFO - 127.0.0.1 - - [23/Apr/2025 17:39:12] "GET /api/sample/nyc_311_calls?limit=100 HTTP/1.1" 200 -
+2025-04-23 17:39:12,432 - werkzeug - INFO - 127.0.0.1 - - [23/Apr/2025 17:39:12] "OPTIONS /api/fetch/mta HTTP/1.1" 200 -
+2025-04-23 17:39:12,684 - data_api - INFO - Fetching mta data from 2020-01-01 00:00:00 to 2023-01-01 00:00:00
+2025-04-23 17:39:12,967 - data_api - INFO - Completed mta task
+2025-04-23 17:39:12,968 - werkzeug - INFO - 127.0.0.1 - - [23/Apr/2025 17:39:12] "POST /api/fetch/mta HTTP/1.1" 200 -
+2025-04-23 17:39:13,091 - werkzeug - INFO - 127.0.0.1 - - [23/Apr/2025 17:39:13] "GET /api/sample/mta_turnstile?limit=100 HTTP/1.1" 200 -
+2025-04-23 17:39:13,412 - werkzeug - INFO - 127.0.0.1 - - [23/Apr/2025 17:39:13] "OPTIONS /api/fetch/tlc HTTP/1.1" 200 -
+2025-04-23 17:39:13,667 - data_api - INFO - Fetching tlc data from 2020-01-01 00:00:00 to 2023-01-01 00:00:00
+2025-04-23 17:39:13,849 - data_api - INFO - Completed tlc task
+2025-04-23 17:39:13,850 - werkzeug - INFO - 127.0.0.1 - - [23/Apr/2025 17:39:13] "POST /api/fetch/tlc HTTP/1.1" 200 -
+2025-04-23 17:39:14,073 - werkzeug - INFO - 127.0.0.1 - - [23/Apr/2025 17:39:14] "GET /api/sample/tlc_trips?limit=100 HTTP/1.1" 200 -
+2025-04-23 17:39:14,395 - werkzeug - INFO - 127.0.0.1 - - [23/Apr/2025 17:39:14] "OPTIONS /api/fetch/weather HTTP/1.1" 200 -
+2025-04-23 17:39:14,647 - data_api - INFO - Fetching weather data from 2020-01-01 00:00:00 to 2023-01-01 00:00:00
+2025-04-23 17:39:14,900 - data_api - INFO - Completed weather task
+2025-04-23 17:39:14,901 - werkzeug - INFO - 127.0.0.1 - - [23/Apr/2025 17:39:14] "POST /api/fetch/weather HTTP/1.1" 200 -
+2025-04-23 17:39:15,010 - werkzeug - INFO - 127.0.0.1 - - [23/Apr/2025 17:39:15] "GET /api/sample/weather?limit=100 HTTP/1.1" 200 -
+2025-04-23 17:39:15,331 - werkzeug - INFO - 127.0.0.1 - - [23/Apr/2025 17:39:15] "OPTIONS /api/fetch/events HTTP/1.1" 200 -
+2025-04-23 17:39:15,600 - data_api - INFO - Fetching events data from 2020-01-01 00:00:00 to 2023-01-01 00:00:00
+2025-04-23 17:39:15,888 - data_api - INFO - Completed events task
+2025-04-23 17:39:15,890 - werkzeug - INFO - 127.0.0.1 - - [23/Apr/2025 17:39:15] "POST /api/fetch/events HTTP/1.1" 200 -
+2025-04-23 17:39:16,052 - data_api - ERROR - Error in get_sample_data: current transaction is aborted, commands ignored until end of transaction block
+
+2025-04-23 17:39:16,054 - werkzeug - INFO - 127.0.0.1 - - [23/Apr/2025 17:39:16] "[35m[1mGET /api/sample/events?limit=100 HTTP/1.1[0m" 500 -
+2025-04-23 17:39:16,458 - data_api - ERROR - Error in get_urban_rhythm: unit "hourly" not recognized for type timestamp without time zone
+
+2025-04-23 17:39:16,460 - werkzeug - INFO - 127.0.0.1 - - [23/Apr/2025 17:39:16] "[35m[1mGET /api/urban-rhythm?start_date=2020-01-01&end_date=2023-01-01&data_types=311,mta,tlc,weather,events HTTP/1.1[0m" 500 -
+2025-04-23 17:39:36,234 - werkzeug - INFO - 127.0.0.1 - - [23/Apr/2025 17:39:36] "OPTIONS /api/fetch/311 HTTP/1.1" 200 -
+2025-04-23 17:39:36,473 - data_api - INFO - Fetching 311 data from 2020-01-01 00:00:00 to 2023-01-01 00:00:00
+2025-04-23 17:39:36,641 - data_api - INFO - Completed 311 task
+2025-04-23 17:39:36,643 - werkzeug - INFO - 127.0.0.1 - - [23/Apr/2025 17:39:36] "POST /api/fetch/311 HTTP/1.1" 200 -
+2025-04-23 17:39:36,758 - werkzeug - INFO - 127.0.0.1 - - [23/Apr/2025 17:39:36] "GET /api/sample/nyc_311_calls?limit=100 HTTP/1.1" 200 -
+2025-04-23 17:39:37,072 - werkzeug - INFO - 127.0.0.1 - - [23/Apr/2025 17:39:37] "OPTIONS /api/fetch/mta HTTP/1.1" 200 -
+2025-04-23 17:39:37,327 - data_api - INFO - Fetching mta data from 2020-01-01 00:00:00 to 2023-01-01 00:00:00
+2025-04-23 17:39:37,487 - data_api - INFO - Completed mta task
+2025-04-23 17:39:37,488 - werkzeug - INFO - 127.0.0.1 - - [23/Apr/2025 17:39:37] "POST /api/fetch/mta HTTP/1.1" 200 -
+2025-04-23 17:39:37,683 - werkzeug - INFO - 127.0.0.1 - - [23/Apr/2025 17:39:37] "GET /api/sample/mta_turnstile?limit=100 HTTP/1.1" 200 -
+2025-04-23 17:39:37,999 - werkzeug - INFO - 127.0.0.1 - - [23/Apr/2025 17:39:37] "OPTIONS /api/fetch/tlc HTTP/1.1" 200 -
+2025-04-23 17:39:38,249 - data_api - INFO - Fetching tlc data from 2020-01-01 00:00:00 to 2023-01-01 00:00:00
+2025-04-23 17:39:38,467 - data_api - INFO - Completed tlc task
+2025-04-23 17:39:38,469 - werkzeug - INFO - 127.0.0.1 - - [23/Apr/2025 17:39:38] "POST /api/fetch/tlc HTTP/1.1" 200 -
+2025-04-23 17:39:38,675 - werkzeug - INFO - 127.0.0.1 - - [23/Apr/2025 17:39:38] "GET /api/sample/tlc_trips?limit=100 HTTP/1.1" 200 -
+2025-04-23 17:39:38,996 - werkzeug - INFO - 127.0.0.1 - - [23/Apr/2025 17:39:38] "OPTIONS /api/fetch/weather HTTP/1.1" 200 -
+2025-04-23 17:39:39,248 - data_api - INFO - Fetching weather data from 2020-01-01 00:00:00 to 2023-01-01 00:00:00
+2025-04-23 17:39:39,654 - data_api - INFO - Completed weather task
+2025-04-23 17:39:39,655 - werkzeug - INFO - 127.0.0.1 - - [23/Apr/2025 17:39:39] "POST /api/fetch/weather HTTP/1.1" 200 -
+2025-04-23 17:39:39,780 - werkzeug - INFO - 127.0.0.1 - - [23/Apr/2025 17:39:39] "GET /api/sample/weather?limit=100 HTTP/1.1" 200 -
+2025-04-23 17:39:40,092 - werkzeug - INFO - 127.0.0.1 - - [23/Apr/2025 17:39:40] "OPTIONS /api/fetch/events HTTP/1.1" 200 -
+2025-04-23 17:39:40,344 - data_api - INFO - Fetching events data from 2020-01-01 00:00:00 to 2023-01-01 00:00:00
+2025-04-23 17:39:40,681 - data_api - INFO - Completed events task
+2025-04-23 17:39:40,683 - werkzeug - INFO - 127.0.0.1 - - [23/Apr/2025 17:39:40] "POST /api/fetch/events HTTP/1.1" 200 -
+2025-04-23 17:39:40,837 - data_api - ERROR - Error in get_sample_data: current transaction is aborted, commands ignored until end of transaction block
+
+2025-04-23 17:39:40,839 - werkzeug - INFO - 127.0.0.1 - - [23/Apr/2025 17:39:40] "[35m[1mGET /api/sample/events?limit=100 HTTP/1.1[0m" 500 -
+2025-04-23 17:39:41,506 - data_api - ERROR - Error in get_urban_rhythm: unit "hourly" not recognized for type timestamp without time zone
+
+2025-04-23 17:39:41,508 - werkzeug - INFO - 127.0.0.1 - - [23/Apr/2025 17:39:41] "[35m[1mGET /api/urban-rhythm?start_date=2020-01-01&end_date=2023-01-01&data_types=311,mta,tlc,weather,events HTTP/1.1[0m" 500 -

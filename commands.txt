@@ -1,0 +1,118 @@
+python -m backend.etl.fetch_weather --start-date 2020-01-01 --end-date 2020-12-31 --save-csv
+python -m backend.etl.fetch_weather --start-date 2021-01-01 --end-date 2021-12-31 --save-csv
+python -m backend.etl.fetch_weather --start-date 2022-01-01 --end-date 2022-12-31 --save-csv
+python -m backend.etl.fetch_weather --start-date 2023-01-01 --end-date 2023-12-31 --save-csv
+python -m backend.etl.fetch_weather --start-date 2024-01-01 --end-date 2024-12-31 --save-csv
+python -m backend.etl.fetch_weather --start-date 2025-01-01 --end-date 2025-04-10 --save-csv
+
+
+python -m backend.etl.fetch_tlc --year 2020 --month 1 --save-csv
+python -m backend.etl.fetch_tlc --year 2020 --month 2 --save-csv
+python -m backend.etl.fetch_tlc --year 2020 --month 3 --save-csv
+python -m backend.etl.fetch_tlc --year 2020 --month 4 --save-csv
+python -m backend.etl.fetch_tlc --year 2020 --month 5 --save-csv
+python -m backend.etl.fetch_tlc --year 2020 --month 6 --save-csv
+python -m backend.etl.fetch_tlc --year 2020 --month 7 --save-csv
+python -m backend.etl.fetch_tlc --year 2020 --month 8 --save-csv
+python -m backend.etl.fetch_tlc --year 2020 --month 9 --save-csv
+python -m backend.etl.fetch_tlc --year 2020 --month 10 --save-csv
+python -m backend.etl.fetch_tlc --year 2020 --month 11 --save-csv
+python -m backend.etl.fetch_tlc --year 2020 --month 12 --save-csv
+
+python -m backend.etl.fetch_tlc --year 2021 --month 1 --save-csv
+python -m backend.etl.fetch_tlc --year 2021 --month 2 --save-csv
+python -m backend.etl.fetch_tlc --year 2021 --month 3 --save-csv
+python -m backend.etl.fetch_tlc --year 2021 --month 4 --save-csv
+python -m backend.etl.fetch_tlc --year 2021 --month 5 --save-csv
+python -m backend.etl.fetch_tlc --year 2021 --month 6 --save-csv
+python -m backend.etl.fetch_tlc --year 2021 --month 7 --save-csv
+python -m backend.etl.fetch_tlc --year 2021 --month 8 --save-csv
+python -m backend.etl.fetch_tlc --year 2021 --month 9 --save-csv
+python -m backend.etl.fetch_tlc --year 2021 --month 10 --save-csv
+python -m backend.etl.fetch_tlc --year 2021 --month 11 --save-csv
+python -m backend.etl.fetch_tlc --year 2021 --month 12 --save-csv
+
+python -m backend.etl.fetch_tlc --year 2022 --month 1 --save-csv
+python -m backend.etl.fetch_tlc --year 2022 --month 2 --save-csv
+python -m backend.etl.fetch_tlc --year 2022 --month 3 --save-csv
+python -m backend.etl.fetch_tlc --year 2022 --month 4 --save-csv
+python -m backend.etl.fetch_tlc --year 2022 --month 5 --save-csv
+python -m backend.etl.fetch_tlc --year 2022 --month 6 --save-csv
+python -m backend.etl.fetch_tlc --year 2022 --month 7 --save-csv
+python -m backend.etl.fetch_tlc --year 2022 --month 8 --save-csv
+python -m backend.etl.fetch_tlc --year 2022 --month 9 --save-csv
+python -m backend.etl.fetch_tlc --year 2022 --month 10 --save-csv
+python -m backend.etl.fetch_tlc --year 2022 --month 11 --save-csv
+python -m backend.etl.fetch_tlc --year 2022 --month 12 --save-csv
+
+
+python -m backend.etl.fetch_tlc --year 2023 --month 1 --save-csv
+python -m backend.etl.fetch_tlc --year 2023 --month 2 --save-csv
+python -m backend.etl.fetch_tlc --year 2023 --month 3 --save-csv
+python -m backend.etl.fetch_tlc --year 2023 --month 4 --save-csv
+python -m backend.etl.fetch_tlc --year 2023 --month 5 --save-csv
+python -m backend.etl.fetch_tlc --year 2023 --month 6 --save-csv
+python -m backend.etl.fetch_tlc --year 2023 --month 7 --save-csv
+python -m backend.etl.fetch_tlc --year 2023 --month 8 --save-csv
+python -m backend.etl.fetch_tlc --year 2023 --month 9 --save-csv
+python -m backend.etl.fetch_tlc --year 2023 --month 10 --save-csv
+python -m backend.etl.fetch_tlc --year 2023 --month 11 --save-csv
+python -m backend.etl.fetch_tlc --year 2023 --month 12 --save-csv
+
+python -m backend.etl.fetch_tlc --year 2024 --month 1 --save-csv
+python -m backend.etl.fetch_tlc --year 2024 --month 2 --save-csv
+python -m backend.etl.fetch_tlc --year 2024 --month 3 --save-csv
+
+
+311 Service Request Data (quarterly chunks)
+2020 311 Data
+python -m backend.etl.fetch_311 --start-date 2020-01-01 --end-date 2020-03-31 --save-csv
+python -m backend.etl.fetch_311 --start-date 2020-04-01 --end-date 2020-06-30 --save-csv
+python -m backend.etl.fetch_311 --start-date 2020-07-01 --end-date 2020-09-30 --save-csv
+python -m backend.etl.fetch_311 --start-date 2020-10-01 --end-date 2020-12-31 --save-csv
+
+2021 311 Data
+python -m backend.etl.fetch_311 --start-date 2021-01-01 --end-date 2021-03-31 --save-csv
+python -m backend.etl.fetch_311 --start-date 2021-04-01 --end-date 2021-06-30 --save-csv
+python -m backend.etl.fetch_311 --start-date 2021-07-01 --end-date 2021-09-30 --save-csv
+python -m backend.etl.fetch_311 --start-date 2021-10-01 --end-date 2021-12-31 --save-csv
+
+2022 311 Data
+python -m backend.etl.fetch_311 --start-date 2022-01-01 --end-date 2022-03-31 --save-csv
+python -m backend.etl.fetch_311 --start-date 2022-04-01 --end-date 2022-06-30 --save-csv
+python -m backend.etl.fetch_311 --start-date 2022-07-01 --end-date 2022-09-30 --save-csv
+python -m backend.etl.fetch_311 --start-date 2022-10-01 --end-date 2022-12-31 --save-csv
+
+2023 311 Data
+python -m backend.etl.fetch_311 --start-date 2023-01-01 --end-date 2023-03-31 --save-csv
+python -m backend.etl.fetch_311 --start-date 2023-04-01 --end-date 2023-06-30 --save-csv
+python -m backend.etl.fetch_311 --start-date 2023-07-01 --end-date 2023-09-30 --save-csv
+python -m backend.etl.fetch_311 --start-date 2023-10-01 --end-date 2023-12-31 --save-csv
+
+2024 311 Data
+python -m backend.etl.fetch_311 --start-date 2024-01-01 --end-date 2024-03-31 --save-csv
+python -m backend.etl.fetch_311 --start-date 2024-04-01 --end-date 2024-12-31 --save-csv
+
+2025 311 Data
+python -m backend.etl.fetch_311 --start-date 2025-01-01 --end-date 2025-04-10 --save-csv
+
+
+MTA Subway Ridership Data (monthly chunks)
+2020 MTA Data (just showing first two months as example - repeat for all months)
+python -m backend.etl.fetch_mta --start-date 2020-01-01 --end-date 2020-01-31 --save-csv
+python -m backend.etl.fetch_mta --start-date 2020-02-01 --end-date 2020-02-29 --save-csv
+2021-2025 MTA Data (example of pattern for each month)
+python -m backend.etl.fetch_mta --start-date 2021-01-01 --end-date 2021-01-31 --save-csv
+NYC Events Data (quarterly chunks)
+
+2020 Events Data
+python -m backend.etl.fetch_events --start-date 2020-01-01 --end-date 2020-03-31 --save-csv
+python -m backend.etl.fetch_events --start-date 2020-04-01 --end-date 2020-06-30 --save-csv
+python -m backend.etl.fetch_events --start-date 2020-07-01 --end-date 2020-09-30 --save-csv
+python -m backend.etl.fetch_events --start-date 2020-10-01 --end-date 2020-12-31 --save-csv
+
+2021 Events Data
+python -m backend.etl.fetch_events --start-date 2021-01-01 --end-date 2021-03-31 --save-csv
+python -m backend.etl.fetch_events --start-date 2021-04-01 --end-date 2021-06-30 --save-csv
+python -m backend.etl.fetch_events --start-date 2021-07-01 --end-date 2021-09-30 --save-csv
+python -m backend.etl.fetch_events --start-date 2021-10-01 --end-date 2021-12-31 --save-csv

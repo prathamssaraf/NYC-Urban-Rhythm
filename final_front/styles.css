@@ -1,0 +1,226 @@
+/* General styling */
+body { 
+    font-family: 'Inter', sans-serif;
+    height: 100vh;
+    overflow-x: hidden;
+}
+
+input[type="file"], input[type="date"] { 
+    padding: 0.5rem; 
+}
+
+/* Map styling */
+#map { 
+    height: 400px; 
+    width: 100%; 
+}
+
+.legend { 
+    max-height: 150px; 
+    overflow-y: auto; 
+    background: rgba(255,255,255,0.9); 
+    padding: 0.75rem; 
+    border-radius: 0.5rem; 
+}
+
+.legend-item { 
+    display: flex; 
+    align-items: center; 
+    margin-bottom: 0.25rem; 
+}
+
+.legend-color { 
+    width: 15px; 
+    height: 15px; 
+    margin-right: 0.5rem; 
+    border: 1px solid #ccc; 
+}
+
+/* Loading overlay */
+#loading-overlay { 
+    position: absolute; 
+    top: 0; 
+    left: 0; 
+    right: 0; 
+    bottom: 0; 
+    background: rgba(255,255,255,0.8); 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    visibility: hidden; 
+    z-index: 1000; 
+}
+
+.spinner { 
+    border: 4px solid rgba(0,0,0,0.1); 
+    width: 36px; 
+    height: 36px; 
+    border-radius: 50%; 
+    border-left-color: #09f; 
+    animation: spin 1s linear infinite; 
+}
+
+@keyframes spin { 
+    to { transform: rotate(360deg); } 
+}
+
+/* UI states */
+button:disabled { 
+    opacity: 0.6; 
+    cursor: not-allowed; 
+}
+
+.tab-active { 
+    background-color: #EFF6FF; 
+    border-bottom: 2px solid #3B82F6; 
+}
+
+.category-item { 
+    cursor: pointer; 
+}
+
+.category-item:hover { 
+    background-color: #F3F4F6; 
+}
+
+.category-item.selected { 
+    background-color: #DBEAFE; 
+}
+
+/* Chart containers */
+.chart-container {
+    height: 220px;
+    max-height: 220px;
+    position: relative;
+}
+
+.tab-content {
+    height: calc(100vh - 240px);
+    max-height: calc(100vh - 240px);
+    overflow-y: auto;
+}
+
+/* Tooltip styling */
+#tooltip {
+    position: absolute;
+    background: white;
+    padding: 10px;
+    border-radius: 4px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.2);
+    display: none;
+    z-index: 1000;
+    max-width: 300px;
+}
+
+#tooltip::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: white transparent transparent transparent;
+}
+
+/* Timeline slider styling */
+#timeline-slider-container {
+    position: relative;
+}
+
+.time-mark {
+    position: absolute;
+    width: 3px;
+    background-color: rgba(59, 130, 246, 0.5);
+    bottom: 0;
+    cursor: pointer;
+}
+
+.time-mark:hover {
+    background-color: rgb(59, 130, 246);
+}
+
+.time-mark.selected {
+    background-color: rgb(59, 130, 246);
+    width: 5px;
+}
+
+.time-label {
+    position: absolute;
+    font-size: 9px;
+    color: #666;
+    white-space: nowrap;
+    transform: rotate(-45deg);
+    transform-origin: left top;
+    margin-top: 2px;
+}
+
+.time-axis {
+    position: absolute;
+    height: 1px;
+    background-color: #ddd;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Data type markers and events */
+.marker-transit {
+    width: 12px;
+    height: 12px;
+    background-color: #10B981;
+    border-radius: 50%;
+    border: 2px solid white;
+}
+
+.marker-event {
+    width: 14px;
+    height: 14px;
+    background-color: #8B5CF6;
+    border-radius: 50%;
+    border: 2px solid white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.marker-event::after {
+    content: 'E';
+    color: white;
+    font-size: 8px;
+    font-weight: bold;
+}
+
+.pulse-circle {
+    width: 30px;
+    height: 30px;
+    background-color: rgba(59, 130, 246, 0.3);
+    border-radius: 50%;
+    position: absolute;
+    animation: pulse 1.5s infinite;
+    pointer-events: none;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(0.5);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1.5);
+        opacity: 0;
+    }
+}
+
+/* Dataset indicator dots */
+.data-indicator {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    margin-right: 4px;
+}
+
+.indicator-311 { background-color: #3B82F6; }
+.indicator-transit { background-color: #10B981; }
+.indicator-taxi { background-color: #F59E0B; }
+.indicator-event { background-color: #8B5CF6; }
